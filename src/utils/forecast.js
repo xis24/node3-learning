@@ -9,10 +9,10 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.error) {
       callback("unable to find location");
     } else {
-      callback(undefined, {
-        temperature: body.current.temperature,
-        feels_like: body.current.feelslike,
-      });
+      callback(
+        undefined,
+        `Current temperature is ${body.current.temperature}, but it feels like ${body.current.temperature}`
+      );
     }
   });
 };

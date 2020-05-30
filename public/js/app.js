@@ -21,12 +21,8 @@ weatherform.addEventListener("submit", (e) => {
         return console.log("error");
       }
       messageOne.textContent = data.location;
-      messageTwo.textContent = JSON.stringify(data.forecastData);
-      console.log(
-        data.location,
-        data.address,
-        JSON.stringify(data.forecastData)
-      );
+      messageTwo.textContent = data.forecastData;
+      console.log(data.location, data.address, data.forecastData);
     });
   });
 });
